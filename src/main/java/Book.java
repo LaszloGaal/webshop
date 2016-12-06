@@ -1,0 +1,32 @@
+/**
+ * Created by laszlogaal on 2016. 12. 05..
+ */
+public class Book extends Product{
+    private String title = "unknown";
+    private String author = "unknown";
+
+    public Book(double price) {
+        super(price);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String getDetails() {
+        return "Price: "+getPrice()+", [Book("+getProductId()+")], Title: "+getTitle()+", Author: "+getAuthor();
+    }
+}
